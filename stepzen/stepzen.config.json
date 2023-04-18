@@ -1,0 +1,11 @@
+{
+  "endpoint": "api/gone-bear",
+  "name": "my-api",
+  "configuration": {
+    "cors": {
+      "origins": ["*"],
+      "headers": ["*"],
+      "methods": ["*"]
+    }
+  }
+}

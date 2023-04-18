@@ -1,0 +1,44 @@
+import { gql } from "@apollo/client";
+
+export const GET_CUSTOMERS = gql`
+  query GetCustomers {
+    getCustomers {
+      name
+      value {
+        email
+        name
+      }
+    }
+  }
+`;
+
+export const GET_ORDERS = gql`
+  query GetOrders {
+    getOrders {
+      name
+      value {
+        Address
+        City
+        Lat
+        carrier
+        createtAt
+        Lng
+        shippingCost
+        trackingId
+        trackingItems {
+          Customer {
+            email
+            name
+          }
+          customer_id
+          items {
+            item_id
+            price
+            name
+            quantity
+          }
+        }
+      }
+    }
+  }
+`;
